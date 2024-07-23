@@ -9,9 +9,7 @@ import 'react-date-range/dist/theme/default.css'; // theme css file
 import { DateRange } from "react-date-range";
 import { format } from "date-fns";
 
-
 function Header() {
-
     const [destination, setDestination] = useState("");
     const [openOptions, setOpenOptions] = useState(false);
     const [options, setOptions] = useState({
@@ -27,7 +25,6 @@ function Header() {
         }
     ]);
     const [openDate, setOpenDate] = useState(false);
-
 
     const handleOptions = (name, operation) => {
         setOptions((prev) => {
@@ -95,7 +92,6 @@ function Header() {
 }
 export default Header;
 
-
 function GuestOptionList({ options, handleOptions, setOpenOptions }) {
     const optionsRef = useRef();
     useOutSideClick(optionsRef, "optionDropDown", () => setOpenOptions(false));
@@ -107,7 +103,6 @@ function GuestOptionList({ options, handleOptions, setOpenOptions }) {
         </div>
     )
 }
-
 
 function OptionItem({ type, options, minLimit, handleOptions }) {
     return (
