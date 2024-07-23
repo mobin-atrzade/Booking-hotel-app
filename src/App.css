@@ -61,11 +61,11 @@
 .guestOptionItem {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  /* gap: 1rem; */
   justify-content: space-between;
 }
 .guestOptionItem:not(:last-child) {
-  margin-bottom: 1rem;
+  margin-bottom: 0.6rem;
 }
 .guestOptionItem span,
 .guestOptionItem button {
@@ -76,6 +76,13 @@
   border-radius: 0.5rem;
   color: var(--text-600);
   background-color: var(--text-100);
+}
+#optionDropDown {
+  font-size: 0.8rem;
+}
+
+.optionCounterNumber {
+  margin: 0 0.4rem;
 }
 .optionText {
   display: inline-block;
