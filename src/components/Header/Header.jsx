@@ -1,4 +1,3 @@
-import React from "react";
 import { MdLocationOn } from "react-icons/md";
 import { HiCalendar, HiMinus, HiPlus, HiSearch } from "react-icons/hi";
 import { useState } from "react";
@@ -8,13 +7,13 @@ import 'react-date-range/dist/styles.css'; // main style file
 import 'react-date-range/dist/theme/default.css'; // theme css file
 import { DateRange } from "react-date-range";
 import { format } from "date-fns";
-import { createSearchParams, useNavigate, useSearchParams } from "react-router-dom";
+import { createSearchParams, useNavigate } from "react-router-dom";
 
 function Header() {
     const [destination, setDestination] = useState("");
     const [openOptions, setOpenOptions] = useState(false);
     const navigate = useNavigate();
-    const [searchParams, setSearchparams] = useSearchParams();
+    // const [searchParams, setSearchparams] = useSearchParams();
     const [options, setOptions] = useState({
         adult: 1,
         children: 0,
