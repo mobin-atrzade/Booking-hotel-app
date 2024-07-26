@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import useUrlLocation from "../../hooks/useUrlLocation";
 import axios from "axios";
 import Loader from "../Loader/Loader";
 import ReactCountryFlag from "react-country-flag";
+import { useBookmark } from "../Context/BookmarkListContext";
 
 
 const BASE_GEOCODING_URL = "https://api.bigdatacloud.net/data/reverse-geocode-client";
@@ -11,6 +12,7 @@ const BASE_GEOCODING_URL = "https://api.bigdatacloud.net/data/reverse-geocode-cl
 function AddNewBookmark() {
     const [lat, lng] = useUrlLocation();
     const navigate = useNavigate();
+    const { createBookmark } = useBookmark();
     const [cityName, setCityName] = useState("");
     const [country, setCountry] = useState("");
     const [countryCode, setCountryCode] = useState("");
@@ -18,7 +20,6 @@ function AddNewBookmark() {
     const [geoCodingError, setGeoCodingError] = useState(null);
 
     useEffect(() => {
-
         if (!lat || !lng) return;
 
         async function fetchLocationData() {
@@ -41,13 +42,29 @@ function AddNewBookmark() {
         fetchLocationData();
     }, [lat, lng])
 
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        if (!cityName || !country) return;
+
+        const newBookmark = {
+            cityName,
+            country,
+            countryCode,
+            latitude: lat,
+            longitude: lng,
+            host_location: cityName + " " + country
+        }
+        await createBookmark(newBookmark);
+        navigate("/bookmark");
+    }
+
     if (isLoadingGeoCoding) return <Loader />
     if (geoCodingError) return <p>{geoCodingError}</p>
 
     return (
         <>
             <h2>Bookmark New Location</h2>
-            <form className="form">
+            <form className="form" onSubmit={handleSubmit}>
                 <div className="formControl">
                     <label htmlFor="cityName">CityName</label>
                     <input

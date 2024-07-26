@@ -1368,6 +1368,42 @@
       "longitude": "67.78003711374224",
       "host_location": "Baba Kot Pakistan",
       "id": 8
+    },
+    {
+      "cityName": "Amiriyeh",
+      "country": "Iran (Islamic Republic of)",
+      "countryCode": "IR",
+      "latitude": "35.784281419034514",
+      "longitude": "54.5599507231889",
+      "host_location": "Amiriyeh Iran (Islamic Republic of)",
+      "id": 9
+    },
+    {
+      "cityName": "Babol",
+      "country": "Iran (Islamic Republic of)",
+      "countryCode": "IR",
+      "latitude": "36.552020877096794",
+      "longitude": "52.74904387321611",
+      "host_location": "Babol Iran (Islamic Republic of)",
+      "id": 10
+    },
+    {
+      "cityName": "Rocquigny",
+      "country": "France",
+      "countryCode": "FR",
+      "latitude": "50.01758452964427",
+      "longitude": "3.9672158654583987",
+      "host_location": "Rocquigny France",
+      "id": 11
+    },
+    {
+      "cityName": "Rawa Mazowiecka",
+      "country": "Poland",
+      "countryCode": "PL",
+      "latitude": "51.815309717153745",
+      "longitude": "20.239890698784944",
+      "host_location": "Rawa Mazowiecka Poland",
+      "id": 12
     }
   ]
 }
