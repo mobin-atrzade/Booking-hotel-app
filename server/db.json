@@ -1323,5 +1323,24 @@
       ]
     }
   ],
-  "bookmarks": []
+  "bookmarks": [
+    {
+      "cityName": "Tellin",
+      "country": "Belgium",
+      "countryCode": "BE",
+      "latitude": "50.06983035091103",
+      "longitude": "5.184288912386804",
+      "host_location": "Tellin Belgium",
+      "id": 3
+    },
+    {
+      "cityName": "Le Nouvion-en-Thierache",
+      "country": "France",
+      "countryCode": "FR",
+      "latitude": "50.012723860997774",
+      "longitude": "3.7945945482832415",
+      "host_location": "Le Nouvion-en-Thierache France",
+      "id": 4
+    }
+  ]
 }
