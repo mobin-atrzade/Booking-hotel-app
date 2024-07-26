@@ -342,6 +342,7 @@
 
 .btn--back {
   border: 1px solid var(--text-400);
+  margin-bottom: 1rem;
 }
 
 .formControl .flag {

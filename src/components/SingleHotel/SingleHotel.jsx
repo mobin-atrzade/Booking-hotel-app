@@ -1,6 +1,5 @@
 
 import { useParams } from "react-router-dom";
-import useFetch from "../../hooks/useFetch";
 import Loader from "../Loader/Loader";
 import { useHotels } from "../Context/HotelsProvider";
 import { useEffect } from "react";
