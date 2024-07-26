@@ -1,18 +1,16 @@
 import { MapContainer, Marker, Popup, TileLayer, useMap, useMapEvent } from "react-leaflet";
-import { useHotels } from "../Context/HotelsProvider";
 import { useEffect, useState } from "react";
-import { useNavigate, useSearchParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import useGeoLocation from "../../hooks/useGeoLocation";
+import useUrlLocation from "../../hooks/useUrlLocation";
 
 function Map({ markerLocations }) {
     const [mapCenter, setMapCenter] = useState([50, 4]);
-    const [searchParams, setSearchParams] = useSearchParams();
-    const lat = searchParams.get("lat");
-    const lng = searchParams.get("lng");
     const {
         isLoading: isLoadingPosition,
         position: geoLocationPosition,
         getPosition } = useGeoLocation();
+    const [lat, lng] = useUrlLocation();
 
     useEffect(() => {
         if (lat && lng) setMapCenter([lat, lng]);

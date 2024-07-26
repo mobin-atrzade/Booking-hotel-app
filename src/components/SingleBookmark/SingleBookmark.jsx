@@ -19,7 +19,6 @@ function SingleBookmark() {
     }
 
     if (isLoadingCurrentBookmark || !currentBookmark) return <Loader />
-
     return (
         <div>
             <button
